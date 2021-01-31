@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Bird or not bird? - Result</title>
+<img src={{ image_name }} style="max-width: 500px" />
+
+<p>
+
+{% if is_bird %}
+<p>The above image is <strong>a bird</strong></p>
+{% else %}
+<p>The above image is <strong>not a bird</strong></p>
+{% endif %}
+
+<br>
+
+{% for message in get_flashed_messages() %}
+  <div class="flash">{{ message }}</div>
+{% endfor %}

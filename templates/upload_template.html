@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Bird or not bird? - Upload</title>
+<h1>Bird or not bird?</h1>
+Upload new image:
+<br>
+<form method=post enctype=multipart/form-data>
+  <!-- NOTE: the file being uploaded will be accessible in flask as request.files['file'] -->
+  <input type=file name=file>
+  <input type=submit value=Upload>
+</form>
+<br>
+
+{% for message in get_flashed_messages() %}
+  <div class="flash">{{ message }}</div>
+{% endfor %}
